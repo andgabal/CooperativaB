@@ -1,15 +1,20 @@
 {
-  "name": "Barrio",
+  "name": "CooperativaB",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andgabal/CooperativaB.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+  "bugs": {
+    "url": "https://github.com/andgabal/CooperativaB/issues"
+  },
+  "homepage": "https://github.com/andgabal/CooperativaB#readme"
 }
