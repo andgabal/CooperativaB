@@ -1,16 +1,33 @@
-const router= require('express').Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/ctacte',(req, res)=>{
-    res.send('ctacte/ctacte');
-});
-router.get('/calculos',(req, res)=>{
-    res.send('ctacte/calc');
-});
-router.get('/consultas',(req, res)=>{
-    res.send('ctacte/consult');
-});
-router.get('/emision',(req, res)=>{
-    res.send('ctacte/emision');
+const pool = require('../database');
+const {isLoggedIn} = require('../lib/auth');
+
+router.get('/mainmenu', async (req, res, next) => {
+    res.render('ctacte/mainmenu');
 });
 
-module.exports=router;
+router.get('/cuotes', async (req, res, next) => {
+    res.render('ctacte/cuotes');
+});
+router.get('/cuotes/load', async (req, res, next) =>{
+    res.render('ctacte/cuotes/load');
+});
+router.get('/cuotes/query', async (req, res, next) =>{
+    res.render('ctacte/cuotes/query');
+});
+router.get('/print', async (req, res, next) =>{
+    res.render('ctacte/print');
+});
+router.get('/currAco', async (req, res, next) =>{
+    res.render('ctacte/currAco');
+});
+router.get('/listdebt',  async (req, res, next) =>{
+    res.render('ctacte/listdebt');
+});
+router.get('/recalcv',  async (req, res, next) =>{
+    res.render('ctacte/recalcv');
+});
+
+module.exports = router;
